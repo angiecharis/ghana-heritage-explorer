@@ -1873,3 +1873,39 @@ footer li {
 .independence-photos-hero::after {
     right: -280px !important;
 }
+
+
+/* MOBILE FOOTER FIX */
+@media (max-width: 650px) {
+
+    .footer-content,
+    body:has(.colonial-explore) .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-about {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-about p {
+        margin-left: 0;
+    }
+
+    .footer-brand h2 {
+        font-size: 20px;
+    }
+
+    .footer-links {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        padding-left: 0;
+    }
+
+    body:has(.search-section) .copyright {
+        margin-left: 0;
+    }
+}
