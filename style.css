@@ -1909,3 +1909,28 @@ footer li {
         margin-left: 0;
     }
 }
+/* GHANA AT INDEPENDENCE - MOBILE HERO FIX */
+@media (max-width: 650px) {
+
+    .independence-hero {
+        padding: 65px 0;
+    }
+
+    .independence-hero h1 {
+        font-size: 32px;
+        line-height: 1.2;
+        margin-bottom: 25px;
+    }
+
+    .independence-hero p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .independence-hero::after {
+        right: -280px;
+        width: 600px;
+        opacity: 0.08;
+    }
+}
