@@ -1957,3 +1957,73 @@ footer li {
         object-fit: contain;
     }
     }
+
+    /* HISTORICAL MAPS: MOBILE HERO FIX */
+
+@media (max-width: 768px) {
+
+  .maps-hero {
+    padding: 55px 6% !important;
+  }
+
+  .maps-hero-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 30px !important;
+  }
+
+  .maps-hero-grid > div {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .maps-hero-grid h1 {
+    font-size: 32px !important;
+    line-height: 1.2;
+  }
+
+  .maps-hero-grid p {
+    width: 100%;
+    max-width: 100%;
+    line-height: 1.6 !important;
+  }
+
+  .maps-hero-grid img {
+    width: 100% !important;
+    max-width: 320px;
+    height: auto !important;
+    object-fit: contain;
+  }
+
+}
+
+/* GHANA AT INDEPENDENCE (1957):
+   ARCHIVAL PHOTOGRAPHS - MOBILE HERO FIX */
+
+@media (max-width: 650px) {
+
+    .archival-hero.independence-photos-hero {
+        padding: 65px 0;
+    }
+
+    .independence-photos-hero .container {
+        width: 88%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .independence-photos-hero h1 {
+        font-size: 30px;
+        line-height: 1.25;
+        margin-bottom: 25px;
+        overflow-wrap: break-word;
+    }
+
+    .independence-photos-hero p {
+        font-size: 15px;
+        line-height: 1.6;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+}
