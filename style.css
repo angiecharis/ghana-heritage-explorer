@@ -2108,3 +2108,23 @@ footer li {
     }
 
 }
+
+/* Footer creator details */
+.creator-credit {
+    margin-top: 12px;
+}
+
+.creator-credit p {
+    font-size: 14px;
+    margin: 0 0 5px;
+}
+
+.creator-credit a {
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.creator-credit a:hover {
+    text-decoration: underline;
+}
