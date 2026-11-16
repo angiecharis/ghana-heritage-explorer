@@ -1,0 +1,1875 @@
+/* GHANA HERITAGE EXPLORER */
+
+/* General settings */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222222;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 88%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navigation bar */
+.site-header {
+    background-color: #e1e1df;
+    padding: 15px 0;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #222222;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.brand img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #222222;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #a46b43;
+}
+
+/* Hero section */
+.hero {
+    background-color: #f4efea;
+    padding: 75px 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 55px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 0 0 30px;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 530px;
+    margin-bottom: 35px;
+}
+
+.hero-image {
+    width: 42%;
+    height: 340px;
+    object-fit: cover;
+}
+
+.button {
+    display: inline-block;
+    background-color: #8b5e3c;
+    color: #ffffff;
+    padding: 13px 22px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.button:hover {
+    background-color: #654226;
+}
+
+/* Collections section */
+.collections-section {
+    padding: 100px 0 120px;
+}
+
+.section-intro {
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 700px;
+    margin-bottom: 70px;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.collection-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.collection-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    font-size: 19px;
+    margin: 0 0 12px;
+}
+
+.card-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 90px;
+}
+
+.card-content a {
+    color: #9b623d;
+    font-size: 14px;
+}
+
+.card-content a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #23392f;
+    color: #ffffff;
+    padding: 55px 0;
+}
+
+footer h2 {
+    font-size: 22px;
+}
+
+footer p {
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 520px;
+}
+
+footer small {
+    display: block;
+    margin-top: 25px;
+    font-size: 12px;
+}
+
+/* Tablet and mobile layout */
+@media (max-width: 800px) {
+    .hero-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 300px;
+    }
+
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navigation {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .hero {
+        padding: 50px 0;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .collections-section {
+        padding: 60px 0;
+    }
+}
+
+.featured-section {
+    padding: 90px 0;
+    background-color: #ffffff;
+}
+
+.eyebrow {
+    color: #9b623d;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+}
+
+.featured-content {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+.featured-text {
+    flex: 1;
+}
+
+.featured-text h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.featured-text p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.featured-images {
+    width: 42%;
+}
+
+.independence-collage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.independence-collage img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background-color: #f4efea;
+}
+
+@media (max-width: 800px) {
+    .featured-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .featured-images {
+        width: 100%;
+    }
+}
+
+footer {
+    background-color: #23392f;
+    color: #ffffff;
+    padding: 45px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.footer-about {
+    max-width: 550px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-brand img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.footer-brand h2 {
+    font-size: 21px;
+    margin: 0;
+}
+
+.footer-about p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 8px 0 14px 70px;
+}
+
+.footer-about .footer-description {
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 150px;
+}
+
+.footer-links h3 {
+    font-size: 15px;
+    margin: 0 0 4px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    font-size: 13px;
+    text-decoration: none;
+}
+.footer-bottom {
+    padding-left: 70px;
+    text-align: left;
+    margin-top: 25px;
+}
+.resource-types {
+    padding: 70px 0 100px;
+    background-color: #ffffff;
+}
+
+.resource-types h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.resource-types p {
+    max-width: 650px;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 35px;
+}
+
+.resource-grid div {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 650px) {
+    .resource-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.resource-grid div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.resource-grid svg {
+    width: 25px;
+    height: 25px;
+    stroke: #23392f;
+    stroke-width: 1.8;
+    flex-shrink: 0;
+}
+.collections-hero-text p {
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 550px;
+}
+
+
+.collections-hero-image {
+    width: 38%;
+    height: 350px;
+    object-fit: cover;
+}
+
+@media (max-width: 650px) {
+    .collections-hero-content {
+        flex-direction: column;
+    }
+
+    .collections-hero-image {
+        width: 100%;
+        height: auto;
+    }
+}
+.collections-hero {
+    background-color: #f5f0ed;
+    padding: 70px 0;
+}
+
+.collections-hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.collections-hero-text {
+    flex: 1;
+}
+
+.collections-hero-image {
+    width: 38%;
+    height: 350px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+@media (max-width: 650px) {
+    .collections-hero-content {
+        flex-direction: column;
+    }
+
+    .collections-hero-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Browse Historical Collections */
+
+.browse-collections {
+    background-color: #ffffff;
+    padding: 80px 0 100px;
+}
+
+.browse-collections h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.browse-intro {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 55px;
+    max-width: 750px;
+}
+
+.historical-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.historical-card {
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding-bottom: 20px;
+}
+
+.historical-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.historical-card h3 {
+    font-size: 18px;
+    margin: 18px 15px 10px;
+}
+
+.historical-card p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0 15px 15px;
+}
+
+.historical-card a {
+    color: #b56b39;
+    font-size: 13px;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.historical-card a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 650px) {
+    .historical-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.independence-hero {
+    background-color: #f5f0e8;
+    padding: 140px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.independence-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.independence-hero h1 {
+    font-size: 42px;
+    margin-bottom: 45px;
+    color: #111111;
+}
+
+.independence-hero p {
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 600px;
+    margin-bottom: 25px;
+    color: #222222;
+}
+
+.independence-hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -280px;
+    width: 850px;
+    height: 100%;
+    background-image: url("Images/sankofa-symbol.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.independence-content {
+    background-color: #ffffff;
+    padding: 80px 0 30px;
+}
+
+.independence-about {
+    margin-bottom: 65px;
+}
+
+.independence-about h2,
+.independence-resources h2 {
+    font-size: 28px;
+    margin-bottom: 18px;
+    color: #111111;
+}
+
+.independence-about p,
+.independence-resources p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 800px;
+    color: #333333;
+}
+
+.independence-resource-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    max-width: 900px;
+    margin: 60px auto 80px;
+}
+
+.independence-resource-card {
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.independence-resource-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    display: block;
+    background-color: #f7f3ed;
+}
+
+.independence-resource-card-body {
+    padding: 20px;
+}
+
+.independence-resource-card a {
+    color: #9A673C;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.independence-resource-card a:hover {
+    text-decoration: underline;
+}
+
+.archival-hero {
+    background-color: #f5f0e8;
+    padding: 140px;
+    position: relative;
+    overflow: hidden;
+}
+
+.archival-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.archival-hero h1 {
+    font-size: 42px;
+    margin-bottom: 45px;
+    color: #111111;
+}
+
+.archival-hero p {
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 600px;
+    margin-bottom: 25px;
+    color: #222222;
+}
+
+    .archival-hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -240px;
+    width: 850px;
+    height: 100%;
+    background-image:url("Images/sankofa-symbol.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.archival-photo-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.archival-photo-card-body {
+    padding: 20px;
+}
+
+.archival-photo-card h3 {
+    margin-bottom: 15px;
+}
+
+.archival-photo-card p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.archival-photo-card a {
+    color: #9a673c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.archival-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    max-width: 900px;
+    margin: 60px auto 80px;
+}
+
+.archival-photo-card {
+    min-width: 0;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.archival-photo-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+
+.independence-photo-gallery {
+    padding: 60px 0 80px;
+}
+
+.independence-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 50px;
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.independence-photo-card {
+    min-width: 0;
+}
+
+.independence-photo-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.independence-photo-card-body {
+    padding: 18px 0;
+}
+
+.independence-photo-card a,
+.independence-photo-card a:visited {
+    color: #8B5E3C;
+}
+
+.independence-photo-card a:hover {
+    color: #704A2F;
+}
+
+.colonial-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 140px 0;
+    min-height: 640px
+}
+
+.colonial-hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -280px;
+    bottom: 100%;
+    width: 850px;
+
+    background-image: url("Images/sankofa-symbol.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.colonial-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.colonial-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.colonial-card:nth-child(3) img {
+    object-position: center top;
+}
+
+.colonial-card:nth-child(5) img {
+    object-position: center top;
+}
+
+.colonial-card a {
+    color: #8B5E3C;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.colonial-card a:hover {
+    text-decoration: underline;
+}
+
+body:has(.colonial-explore) footer {
+    background-color: #23392f;
+    color: #ffffff;
+    padding: 45px 0 20px;
+}
+
+body:has(.colonial-explore) .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+body:has(.colonial-explore) .footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.forts-hero::after {
+    right: -250px;
+}
+
+.railways-hero::after {
+    right: -280px;
+}
+
+.railways-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 140px 0;
+    min-height: 640px
+} 
+
+body:has(.railways-hero) .colonial-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 60px;
+    margin-top: 35px;
+}
+
+body:has(.railways-hero) .colonial-card {
+    min-width: 0;
+}
+
+body:has(.railways-hero) .colonial-card img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+@media (max-width: 700px) {
+    body:has(.railways-hero) .colonial-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+body:has(.railways-hero) .colonial-card:first-child img {
+    object-fit: contain;
+    object-position: center center;
+    background-color: #f5f1e9;
+}
+
+/* Everyday Life hero - Sankofa position */
+.everyday-hero::after {
+    right: -270px;
+}
+
+/* Everyday Life - Family and Community Life image */
+body:has(.everyday-hero) .colonial-card:nth-child(5) img {
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Cocoa, Gold and Colonial Economy hero */
+.cocoa-hero::after {
+    right: -270px;
+}
+
+.cocoa-hero {
+    padding: 180px 0;
+    min-height: 500px;
+}
+
+/* Resistance to Colonial Rule hero layout */
+
+.resistance-hero .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.resistance-hero h1 {
+    margin-bottom: 20px;
+}
+
+.resistance-hero p {
+    max-width: 750px;
+    line-height: 1.7;
+}
+
+/* Sankofa position - Resistance to Colonial Rule */
+
+.resistance-hero::after {
+    right: -240px;
+}
+
+/* Spacing between Resistance to Colonial Rule cards */
+
+.resistance-cards {
+    row-gap: 60px;
+}
+
+/* Spacing between Cocoa, Gold and Colonial Economy cards */
+
+.cocoa-cards {
+    row-gap: 60px;
+}
+
+/* Align text in the right-hand Resistance cards */
+
+.resistance-cards .colonial-card:nth-child(2) h3,
+.resistance-cards .colonial-card:nth-child(2) p,
+.resistance-cards .colonial-card:nth-child(2) a,
+.resistance-cards .colonial-card:nth-child(4) h3,
+.resistance-cards .colonial-card:nth-child(4) p,
+.resistance-cards .colonial-card:nth-child(4) a {
+    margin-left: 35px;
+}
+
+/* Road to Independence - hero layout and height */
+
+.independence-hero.road-hero {
+    min-height: 600px;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.road-hero .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.road-hero .hero-content h1 {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+}
+
+.road-hero .hero-content p {
+    width: 100%;
+    max-width: 750px;
+    margin: 0;
+    line-height: 1.7;
+    text-align: left;
+}
+
+/* Road to Independence - final hero adjustments */
+
+.independence-hero.road-hero {
+    min-height: 550px;
+}
+
+.road-hero::after {
+    right: -240px;
+}
+
+.resource-grid a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.resource-grid a:hover {
+    color: #8B5E3C;
+}
+
+
+/* Books and Publications - vertical layout */
+
+.books-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 65px;
+    justify-items: center;
+}
+
+.books-grid .colonial-card {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.books-grid .colonial-card img {
+    display: block;
+    width: 220px;
+    height: 300px;
+    object-fit: contain;
+    margin: 0 auto 20px;
+}
+
+.books-grid .colonial-card h3,
+.books-grid .colonial-card p,
+.books-grid .colonial-card a {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.road-cards .colonial-card h3,
+.road-cards .colonial-card p,
+.road-cards .colonial-card a {
+    text-align: center;
+}
+
+.books-grid .colonial-card p {
+    max-width: 500px;
+    line-height: 1.6;
+
+width: 100%; 
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.books-grid > .colonial-card h3,
+.books-grid > .colonial-card p,
+.books-grid > .colonial-card a {
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.books-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 65px;
+}
+
+.books-grid .colonial-card {
+    width: 90% !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    text-align: center !important;
+}
+
+.books-grid .colonial-card img {
+    display: block;
+    width: 220px;
+    height: 300px;
+    object-fit: contain;
+    margin: 0 auto 20px !important;
+}
+
+.books-grid .colonial-card h3,
+.books-grid .colonial-card p,
+.books-grid .colonial-card a {
+    display: block;
+    width: 100% !important;
+    max-width: 550px;
+    margin: 10px auto !important;
+    padding: 0 !important;
+    text-align: center !important;
+}
+
+.books-grid .colonial-card h3 {
+    font-size: 18px !important;
+}
+
+.books-grid .colonial-card p {
+    font-size: 14px !important;
+    line-height: 1.6;
+}
+
+.books-grid .colonial-card a {
+    font-size: 13px !important;
+}
+
+
+/* Archival Photographs: vertical card layout only */
+
+.archival-collections .archival-photo-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 65px;
+}
+
+.archival-collections .archival-photo-card {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.archival-collections .archival-photo-card img {
+    display: block;
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto 25px;
+}
+
+
+.archival-collections .archival-photo-card-body {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+}
+
+.archival-collections .archival-photo-card-body h3,
+.archival-collections .archival-photo-card-body p,
+.archival-collections .archival-photo-card-body a {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.archival-collections .archival-photo-card-body p {
+    max-width: 550px;
+    line-height: 1.6;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+/* Equal spacing between political leadership cards */
+.archival-photo-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+}
+.archival-photo-grid > .archival-photo-card {
+    margin-bottom: 70px !important;
+}
+
+.archival-photo-grid > .archival-photo-card:last-child {
+    margin-bottom: 0 !important;
+}
+/* Ghana at Independence 1957 - Resource Cards Only */
+
+.independence-resource-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.independence-resource-grid .independence-resource-card {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.independence-resource-grid .independence-resource-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.independence-resource-grid .independence-resource-card-body {
+    text-align: center;
+    padding: 30px;
+}
+
+.independence-resource-grid .independence-resource-card-body h3,
+.independence-resource-grid .independence-resource-card-body p,
+.independence-resource-grid .independence-resource-card-body a {
+    text-align: center;
+}
+
+/* Ghana at Independence 1957 - Archival Photograph Gallery Only */
+
+.independence-photo-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.independence-photo-grid .independence-photo-card {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.independence-photo-grid .independence-photo-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.independence-photo-grid .independence-photo-card-body {
+    text-align: center;
+    padding: 30px;
+}
+
+.independence-photo-grid .independence-photo-card-body h3,
+.independence-photo-grid .independence-photo-card-body p,
+.independence-photo-grid .independence-photo-card-body a {
+    text-align: center;
+}
+
+/* Cocoa, Gold and Colonial Economy page only */
+
+.cocoa-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.cocoa-cards .colonial-card {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.cocoa-cards .colonial-card img {
+    display: block;
+    width: 100%;
+    max-height: 520px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto 25px;
+}
+
+.cocoa-cards .colonial-card h3,
+.cocoa-cards .colonial-card p {
+    text-align: center;
+}
+
+.cocoa-cards .colonial-card a {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+/* Colonial Ghana page: vertical image cards only */
+
+.colonial-ghana-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.colonial-ghana-gallery .colonial-card {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.colonial-ghana-gallery .colonial-card img {
+    display: block;
+    width: 100%;
+    max-height: 520px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto 25px;
+}
+
+.colonial-ghana-gallery .colonial-card h3,
+.colonial-ghana-gallery .colonial-card p {
+    text-align: center;
+}
+
+.colonial-ghana-gallery .colonial-card a {
+    display: inline-block;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Forts, Castles and European Trade: vertical gallery */
+
+.colonial-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.colonial-cards .colonial-card {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.colonial-cards .colonial-card img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+.colonial-cards .colonial-card h3,
+.colonial-cards .colonial-card p {
+    text-align: center;
+}
+
+.colonial-cards .colonial-card p {
+    max-width: 650px;
+    margin: 15px auto 20px;
+}
+
+/* Railways, Roads and Colonial Development gallery */
+
+.railway-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.railway-gallery .colonial-card {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.railway-gallery .colonial-card img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+.railway-gallery .colonial-card h3,
+.railway-gallery .colonial-card p {
+    text-align: center;
+}
+
+.railway-gallery .colonial-card p {
+    max-width: 650px;
+    margin: 15px auto 20px;
+}
+
+/* Railway gallery layout correction */
+
+.colonial-cards.railway-gallery {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 50px !important;
+}
+
+.colonial-cards.railway-gallery > .colonial-card {
+    width: 100% !important;
+    max-width: 750px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
+.colonial-cards.railway-gallery > .colonial-card img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+.colonial-cards.railway-gallery > .colonial-card h3,
+.colonial-cards.railway-gallery > .colonial-card p {
+    text-align: center !important;
+}
+
+.colonial-cards.railway-gallery > .colonial-card p {
+    max-width: 650px;
+    margin: 15px auto 20px;
+}
+
+.colonial-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.colonial-cards .colonial-card {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.colonial-cards .colonial-card img {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+.colonial-cards .colonial-card h3,
+.colonial-cards .colonial-card p {
+    text-align: center;
+}
+
+.colonial-cards .colonial-card p {
+    max-width: 650px;
+    margin: 15px auto;
+}
+
+.colonial-cards .colonial-card a {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.resistance-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.resistance-cards .colonial-card {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.resistance-cards .colonial-card img {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+.resistance-cards .colonial-card h3,
+.resistance-cards .colonial-card p {
+    text-align: center;
+}
+
+.resistance-cards .colonial-card p {
+    max-width: 650px;
+    margin: 15px auto;
+}
+
+.resistance-cards .colonial-card a {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.road-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.road-cards .colonial-card {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.road-cards .colonial-card img {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+.road-cards .colonial-card h3,
+.road-cards .colonial-card p {
+    text-align: center;
+}
+
+.road-cards .colonial-card p {
+    max-width: 650px;
+    margin: 15px auto;
+}
+
+.road-cards .colonial-card a {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.kingdoms-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.kingdoms-cards .colonial-card {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.kingdoms-cards .colonial-card img {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+.kingdoms-cards .colonial-card h3,
+.kingdoms-cards .colonial-card p {
+    text-align: center;
+}
+
+.kingdoms-cards .colonial-card p {
+    max-width: 650px;
+    margin: 15px auto;
+}
+
+.kingdoms-cards .colonial-card a {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.about-hero h1 {
+    margin-bottom: 8px;
+}
+
+.about-hero .about-tagline {
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+.about-hero .about-aim-heading {
+    font-size: 24px;
+    margin-top: 55px;
+    margin-bottom: 12px;
+}
+
+.about-content ul {
+    padding-left: 24px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.about-content li {
+    margin-bottom: 18px;
+    line-height: 1.8;
+}
+/* ABOUT PAGE HERO BANNER */
+
+/* ABOUT PAGE HERO BANNER */
+
+.about-hero {
+    background-color: #F5F0EC;
+    background-image: url("Images/sankofa.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 420px;
+
+    min-height: 550px;
+    padding: 80px 0;
+
+    display: flex;
+    align-items: center;
+}
+
+/* ABOUT PAGE HERO BANNER */
+
+.about-hero {
+    background-color: #F5F0EC;
+    background-image: linear-gradient(
+        rgba(245, 240, 236, 0.92),
+        rgba(245, 240, 236, 0.92)
+    ), url("Images/logo.png");
+
+    background-repeat: no-repeat;
+    background-position: center, right -100px center;
+background-size: cover, 650px;
+
+    min-height: 550px;
+    padding: 80px 0;
+
+    display: flex;
+    align-items: center;
+}
+
+/* SEARCH PAGE */
+
+.search-section {
+    padding: 80px 0 100px;
+    min-height: 550px;
+}
+
+.search-section h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.search-section > .container > p {
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+#search-form {
+    display: flex;
+    gap: 12px;
+    max-width: 750px;
+    margin-bottom: 40px;
+}
+
+#search-input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px 18px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#search-form button {
+    background-color: #234638;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#search-form button:hover {
+    background-color: #173126;
+}
+
+.search-result {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.search-result a {
+    color: #234638;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.search-result a:hover {
+    text-decoration: underline;
+}
+
+.search-result p {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+
+/* SEARCH PAGE - NAVIGATION SPACING */
+
+body:has(.search-section) header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+/* SEARCH PAGE - FOOTER LOGO FIX */
+
+body:has(.search-section) .footer-about img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+body:has(.search-section) .footer-about h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+body:has(.search-section) .footer-about {
+    max-width: 550px;
+}
+
+body:has(.search-section) .copyright {
+    margin-left: 65px;
+}
+
+.maps-introduction h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.maps-introduction p {
+    line-height: 1.7;
+}
+
+/* MOBILE VIEW */
+
+@media (max-width: 768px) {
+    .maps-hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .maps-hero-content img {
+        max-width: 100%;
+        width: 260px;
+    }
+}
+.audio-video-hero {
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+}
+body:has(title) main > section:first-child {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+}
+
+/* Audio and Video footer fix */
+
+footer {
+    background-color: #23382f !important;
+    color: white !important;
+    padding: 30px 7% 15px !important;
+}
+
+footer > div {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer img {
+    width: 55px !important;
+    height: auto !important;
+}
+
+footer h2,
+footer h3,
+footer h4 {
+    color: white !important;
+}
+
+footer p {
+    color: white !important;
+    line-height: 1.5;
+}
+
+footer a,
+footer a:visited {
+    color: white !important;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+footer li {
+    margin-bottom: 8px;
+}
+.site-footer > p {
+    display: block !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    text-align: left !important;
+    margin: 25px auto 0 !important;
+    padding: 0 20px !important;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+.newspapers-hero {
+    min-height: 0 !important;
+    height: auto !important;
+    padding-top: 200px !important;
+    padding-bottom: 45px !important;
+}
+.newspapers-hero .independence-hero-content {
+    transform: translateY(-100px) !important;
+}
+.newspapers-hero {
+    background-position: right -350px center !important;
+}
+.newspapers-hero {
+    background-position: right px center !important;
+}
+.newspapers-hero::after {
+    right: -230px !important;
+}
+.archival-photo-hero::after {
+    right: -500px !important;
+}
+.independence-photos-hero::after {
+    right: -280px !important;
+}
